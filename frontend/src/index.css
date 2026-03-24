@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-pretendard: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F7F8FA;
+  --color-bg-tertiary: #F0F1F3;
+
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #6B7280;
+  --color-text-tertiary: #9CA3AF;
+
+  --color-border: #E5E7EB;
+  --color-border-light: #F3F4F6;
+
+  --color-accent-red: #DC2626;
+  --color-accent-orange: #EA580C;
+  --color-accent-blue: #2563EB;
+
+  --color-tag-bg: #EEF2FF;
+  --color-tag-text: #4F46E5;
+  --color-tag-border: #C7D2FE;
+
+  /* 전단지 느낌 컬러 */
+  --color-flyer-red: #DC2626;
+  --color-flyer-yellow: #FBBF24;
+  --color-flyer-red-bg: #FEF2F2;
+  --color-flyer-yellow-bg: #FFFBEB;
+  --color-flyer-badge: #B91C1C;
+}
+
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 18s linear infinite;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-pretendard);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
